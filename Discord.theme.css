@@ -1,0 +1,171 @@
+/**
+ * @name The GodFather
+ * @author 0xvs
+ * @version 1.0.0
+ * @description The GodFather theme by 0xvs.
+ */
+/* IMPORT CSS */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
+@import url("https://raw.githubusercontent.com/V4R0ON/The-GodFather-Theme/main/TheGodFather-main.css");
+@import url("https://raw.githubusercontent.com/V4R0ON/The-GodFather-Theme/main/TheGodFather-betterdiscord.css");
+@import url("https://raw.githubusercontent.com/V4R0ON/The-GodFather-Theme/main/discord-arabic-font.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
+/* SETTINGS */
+:root {
+  /* ACCENT COLORS */
+  --main-color: #74757a; /* main accent color (hex, rgb or hsl) */
+  --hover-color: #5f6065; /* hover accent color (hex, rgb or hsl) */
+  --success-color: #23a55a; /* positive accent color (hex, rgb or hsl) */
+  --danger-color: #ed4245; /* danger accent color (hex, rgb or hsl) */
+  /* STATUS COLORS */
+  --online-color: #23a55a; /* online status color (hex, rgb or hsl) */
+  --idle-color: #f0b232; /* idle status color (hex, rgb or hsl) */
+  --dnd-color: #f23f42; /* dnd status color (hex, rgb or hsl) */
+  --streaming-color: #593695; /* streaming status color (hex, rgb or hsl) */
+  --offline-color: #777b83; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
+  /* APP BACKGROUND */
+  --background-shading-percent: 100%; /* app background shading amount (0 for complete smoothness) [default: 100%] */
+  --background-image: url(https://i.imgur.com/mp8f8NO.jpeg); /* app background image (link must be HTTPS) */
+  --background-position: center; /* app background position [default: center] */
+  --background-size: cover; /* app background size (px) [default: cover] */
+  --background-attachment: scroll; /* app background attachment [default: fixed] */
+  --background-filter: none; /* app background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: saturate(calc(var(--saturation-factor, 1) * 1))] */
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image); /* user popout background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-popout-position: var(--background-position); /* user popout position [default: var(--background-position)] */
+  --user-popout-size: var(--background-size); /* user popout size (px) [default: var(--background-size)] */
+  --user-popout-attachment: var(--background-attachment); /* user popout background attachment [default: var(--background-attachment)] */
+  --user-popout-filter: var(--background-filter); /* user popout background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image); /* user modal background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-modal-position: var(--background-position); /* user modal position [default: var(--background-position)] */
+  --user-modal-size: var(--background-size); /* user modal size (px) [default: var(--background-size)] */
+  --user-modal-attachment: var(--background-attachment); /* user modal background attachment [default: var(--background-attachment)] */
+  --user-modal-filter: var(--background-filter); /* user modal background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* HOME ICON */
+  --home-icon: url(https://raw.githubusercontent.com/V4R0ON/The-GodFather-Theme/main/discord.svg); /* home button icon */
+  --home-size: cover; /* home button icon size (px) [default:cover] */
+  /* FONTS */
+  --main-font: "SF Arabic Black", "SF Arabic", "Noto Sans", "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* main font for app */
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+  /* CHANNEL COLORS */
+  --channel-normal: var(--interactive-text-default); /* channel text color [default: var(--interactive-text-default)] */
+  --channel-muted: var(--interactive-muted); /* muted channel text color [default: var(--interactive-muted)] */
+  --channel-hover: var(--interactive-text-hover); /* hovered channel text color [default: var(--interactive-text-hover)] */
+  --channel-selected: var(--interactive-text-active); /* selected channel text color [default: var(--interactive-text-active)] */
+  --channel-selected-bg: var(--main-color); /* selected channel background [default: var(--main-color)] */
+  --channel-unread: var(--main-color); /* unread channel text color [default: var(--main-color)] */
+  --channel-unread-hover: var(--hover-color); /* unread channel hover color [default: var(--hover-color)] */
+  /* ACCESSIBILITY */
+  --focus-color: var(--main-color); /* outline when pressing TAB key [default: var(--main-color)] */
+}
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.3); /* app background shading color [default: rgba(252, 252, 252, 0.3)] */
+  --card-shading: rgba(252, 252, 252, 0.3); /* cards background shading color [default: rgba(252, 252, 252, 0.3)] */
+  --popout-shading: rgba(252, 252, 252, 0.7); /* popouts background shading color [default: rgba(252, 252, 252, 0.7)] */
+  --modal-shading: rgba(252, 252, 252, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(0, 0, 0, 0.3); /* inputs background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --normal-text: #36363c; /* text color [default: #36363c] */
+  --muted-text: #75757e; /* muted text color [default: #75757e] */
+}
+
+/* ASH THEME */
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(12, 13, 16, 0.985); /* app background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --card-shading: rgba(27, 29, 34, 0.99); /* cards background shading color [default: rgba(0, 0, 0, 0.2)] */
+  --popout-shading: rgba(18, 20, 24, 0.995); /* popouts background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --modal-shading: rgba(18, 20, 24, 0.995); /* modals background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: #e3e5e8; /* text color [default: #d8d8db] */
+  --muted-text: #a4a8b0; /* muted text color [default: #aeaeb4] */
+}
+
+/* DARK THEME */
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.6); /* app background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --card-shading: rgba(0, 0, 0, 0.3); /* cards background shading color [default: rgba(0, 0, 0, 0.3)] */
+  --popout-shading: rgba(0, 0, 0, 0.7); /* popouts background shading color [default: rgba(0, 0, 0, 0.7)] */
+  --modal-shading: rgba(0, 0, 0, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: #fbfbfb; /* text color [default: #fbfbfb] */
+  --muted-text: #94949c; /* muted text color [default: #94949c] */
+}
+
+/* ONYX THEME */
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.8); /* app background shading color [default: rgba(0, 0, 0, 0.8)] */
+  --card-shading: rgba(0, 0, 0, 0.4); /* cards background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --popout-shading: rgba(0, 0, 0, 0.8); /* popouts background shading color [default: rgba(0, 0, 0, 0.8)] */
+  --modal-shading: rgba(0, 0, 0, 0.6); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: #dcdcde; /* text color [default: #dcdcde] */
+  --muted-text: #86868e; /* muted text color [default: #86868e] */
+}
+
+/* ADD ADDITIONAL CSS BELOW HERE */
+
+/* The GodFather branding */
+.info__2debe::after {
+  content: "GodFather";
+}
+
+:is(.theme-dark, .theme-light):not(.platform-osx) .leading_c38106::before {
+  content: "GodFather";
+}
+
+:is(.theme-dark, .theme-light):not(.platform-osx) .leading_c38106::after {
+  content: "";
+  display: none;
+}
+
+/* Keep the supplied artwork and user media in their original colors. */
+img,
+video,
+svg,
+canvas {
+  filter: none;
+}
+
+/* Preserve Discord's native link and button colors. */
+[class*="anchor_"] {
+  color: #00a8fc !important;
+}
+
+[class*="anchor_"]:hover {
+  color: #00aff4 !important;
+}
+
+.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5),
+.bd-button-filled.bd-button-color-primary {
+  background-color: #7a7a7c !important;
+}
+
+.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5):hover,
+.bd-button-filled.bd-button-color-primary:hover {
+  background-color: #554e4e !important;
+}
+
+/* Arabic typography. Keep emoji on the native emoji font. */
+[class*="messageContent_"] {
+  font-family: "SF Arabic Black", "SF Arabic", "Noto Sans", "gg sans", "Noto Sans Arabic", sans-serif;
+  font-size: 15px;
+}
+
+[class*="messageContent_"] [class*="mention_"],
+[class*="messageContent_"] [class*="roleMention_"],
+[class*="messageContent_"] [class*="channelMention_"],
+[class*="messageContent_"] [class*="customEmoji_"],
+[class*="messageContent_"] .emoji {
+  font-family: "gg sans", "Noto Sans Arabic", sans-serif !important;
+}
+
+/* Keep the interface responsive by avoiding expensive visual effects. */
+*,
+*::before,
+*::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
